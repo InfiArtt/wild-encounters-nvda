@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wild Encounters for NVDA</title>
+<style>
+body { font-family: Segoe UI, sans-serif; max-width: 46em; margin: 1em auto; padding: 0 1em; line-height: 1.5; }
+kbd { font-family: inherit; font-weight: 600; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #999; padding: .3em .6em; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+<h1>Wild Encounters for NVDA</h1>
+
+<p>A sweet, ambient Pokémon fan add-on, not a game. Now and then NVDA tells you which wild
+Pokémon is around you, from the real weather, time of day and moon at your home:</p>
+<blockquote><p>Psst! It's raining over Batam... a Wingull is gliding just above the rooftops near
+you.</p></blockquote>
+<p>No battles, no catching, no grinding. Every Pokémon you meet goes into your Field Journal.
+Each kind of Pokémon has its own little sound (water, electric, fire, leaves, wind, sparkles,
+shadows, earth), and a rare one has its own too.</p>
+
+<h2>Getting started</h2>
+<ol>
+<li>Open NVDA's menu, Preferences, Settings, and choose the <strong>Wild Encounters</strong>
+category. (Or press <kbd>NVDA+Alt+O</kbd>, then <kbd>O</kbd>.)</li>
+<li>In <strong>New home</strong>, paste where you live: a map link, coordinates or your city's
+name. Then press <strong>Find this place</strong> (or Enter in that field). NVDA says what it
+found.</li>
+<li>Check <strong>Name said in encounters</strong>. It is filled in for you, and you can change
+it to your neighbourhood if you like.</li>
+<li>If you want Pokémon to come by themselves, check <strong>Let wild Pokémon come by
+themselves</strong>. Then press OK.</li>
+</ol>
+
+<h3>What you can paste as your home</h3>
+<ul>
+<li>A Google Maps link, including the short ones from the Share button
+(<code>maps.app.goo.gl/...</code>).</li>
+<li>An OpenStreetMap, Apple Maps, Bing Maps or Waze link.</li>
+<li>Coordinates, such as <code>-6.2088, 106.8456</code>, or
+<code>6°12'31.7"S 106°50'44.2"E</code>.</li>
+<li>A city's name, such as <code>Batam</code>. If there are several, add the country:
+<code>Springfield, United States</code>.</li>
+</ul>
+<p>If a link doesn't say where the place is, NVDA tells you. Open the link in your browser, wait
+for the map, copy the address from the address bar and paste that instead.</p>
+
+<h2>Keys</h2>
+<p>Press <kbd>NVDA+Alt+O</kbd>, then one of these keys:</p>
+<table>
+<tr><th>Key</th><th>What it does</th></tr>
+<tr><td><kbd>W</kbd></td><td>Look around for a wild Pokémon. You can do this every 20 minutes.</td></tr>
+<tr><td><kbd>J</kbd></td><td>Open your Field Journal.</td></tr>
+<tr><td><kbd>L</kbd></td><td>Say your last encounter.</td></tr>
+<tr><td><kbd>C</kbd></td><td>Say how many Pokémon you've met.</td></tr>
+<tr><td><kbd>S</kbd></td><td>Say the status: your home, today's encounters, and when you can look around again.</td></tr>
+<tr><td><kbd>O</kbd></td><td>Open the Wild Encounters settings.</td></tr>
+<tr><td><kbd>H</kbd></td><td>Say these keys.</td></tr>
+</table>
+<p>Every command is also in NVDA's Input gestures dialog, under Wild Encounters, so you can give
+it a key of its own, or change <kbd>NVDA+Alt+O</kbd>.</p>
+
+<h2>Never too much</h2>
+<ul>
+<li><strong>Looking around yourself</strong> works once every 20 minutes. Until then, NVDA only says how
+many minutes are left; nothing is asked of the internet. A try that fails (no internet) doesn't
+count.</li>
+<li><strong>Coming by themselves</strong> is off until you turn it on. Then the weather decides:
+when the rain starts or stops, a storm rolls in, fog settles, or at dawn and dusk, someone is
+much likelier to come by than on a plain sunny afternoon. At most once, twice or three times a
+day (you choose), never within an hour and a half of the last one, and never in your quiet
+hours (10 PM to 7 AM unless you change them).</li>
+<li>A Pokémon that comes by itself waits until you pause, so it never talks over what NVDA is
+reading. If you stay busy for 20 minutes, it leaves.</li>
+<li>Legendary and mythical Pokémon only appear on a full moon night or on your birthday (if you
+give it in the settings).</li>
+</ul>
+
+<h2>The Field Journal</h2>
+<p>A list of every Pokémon you've met, the most recent first. Press Enter on one to hear about
+it: its types, size, colour, where it likes to live, what it evolves from and into, and how rare
+it is. <strong>Copy</strong> puts a sentence to share on the clipboard ("I met a Psyduck in the
+rain today!"). <strong>Clear the journal</strong> forgets everyone, after asking. It is also in
+NVDA's menu, Tools, Wild Encounters Field Journal.</p>
+
+<h2>Privacy</h2>
+<ul>
+<li>Your home is kept only rounded to 2 decimals (about 1 kilometre), in the add-on's own folder
+in NVDA's settings (<code>wildEncounters</code>). The exact point you paste is never kept or
+sent.</li>
+<li>When you press Find this place: a short Google link is followed on Google's own addresses
+only; a city's name is looked up with Open-Meteo's geocoding; the town's name for the rounded
+point is looked up with OpenStreetMap's Nominatim.</li>
+<li>The weather comes from Open-Meteo for the rounded point: when you look around, and, while
+Pokémon may come by themselves, every half hour outside your quiet hours.</li>
+<li>Pokémon names and facts come from PokéAPI. The requests carry nothing about you. Every answer
+is kept on your computer for 30 days, so PokéAPI is asked as little as possible (one request at
+a time, at most 300 a day, with a pause after a failure).</li>
+<li>Your settings, your Field Journal and the day's count stay on your computer.</li>
+</ul>
+
+<h2>About</h2>
+<p>English only. Ported from the Wild Encounters extension for Hariku V2. The sounds were made
+for this add-on. Licensed under the GNU General Public License, version 2 or later.</p>
+<p>Wild Encounters is a free, unofficial fan add-on. It is not affiliated with, endorsed or
+sponsored by Nintendo, Game Freak, Creatures or The Pokémon Company. Pokémon and Pokémon
+character names are trademarks of Nintendo. Data from <a href="https://pokeapi.co">PokéAPI</a>.
+Weather from <a href="https://open-meteo.com">Open-Meteo</a>. Town names ©
+<a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
+</body>
+</html>
